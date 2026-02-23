@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Distribuidora Santos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
 </head>
 
 <body>
@@ -68,19 +69,19 @@
 
             <div class="diferenciais-grid">
 
-                <div class="diferencial-card">
+                <div class="diferencial-card fade-up">
                     <div class="icon">🚚</div>
                     <h3>Entrega Rápida</h3>
                     <p>Logística eficiente garantindo prazos reduzidos e segurança no transporte.</p>
                 </div>
 
-                <div class="diferencial-card">
+                <div class="diferencial-card fade-up">
                     <div class="icon">⭐</div>
                     <h3>Qualidade Garantida</h3>
                     <p>Produtos selecionados com alto padrão de qualidade e confiabilidade.</p>
                 </div>
 
-                <div class="diferencial-card">
+                <div class="diferencial-card fade-up">
                     <div class="icon">🤝</div>
                     <h3>Parceira Comercial</h3>
                     <p>Relacionamento sólido e atendimento personalizado para cada cliente.</p>
@@ -99,41 +100,23 @@
 
             <div class="catalogo-grid">
 
-                <div class="produto-card">
-                    <div class="produto-img">
-                        <img src="img/bateria-iphone-11-pro.jpg" alt="Baterias">
-                    </div>
+                <a href="baterias.html" target="_blank" rel="noopener noreferrer" class="produto-card">
+                    <img src="img/bateria-iphone-11-pro.jpg" alt="Baterias">
+                    <h3>Baterias</h3>
+                    <p>Confira todos os modelos disponíveis</p>
+                </a>
 
-                    <div class="produto-info">
-                        <h3>Baterias</h3>
-                        <p>Descrição breve do produto.</p>
-                        <a href="https://wa.me/5511988711403?text=Olá,%20tenho%20interesse%20no%20produto%20%20e%20gostaria%20de%20um%20orçamento." class="btn-outline" target="_blank">Solicitar Orçamento</a>
-                    </div>
-                </div>
+                <a href="telas.html"  target="_blank" rel="noopener noreferrer" class="produto-card">
+                    <img src="img/1937_LCD104XSIW_IPXS_01-622.jpg" alt="Telas">
+                    <h3>Telas</h3>
+                    <p>Confira todos os modelos disponíveis</p>
+                </a>
 
-                <div class="produto-card">
-                    <div class="produto-img">
-                        <img src="img/1937_LCD104XSIW_IPXS_01-622.jpg" alt="Telas">
-                    </div>
-
-                    <div class="produto-info">
-                        <h3>Telas</h3>
-                        <p>Descrição breve do produto.</p>
-                        <a href="https://wa.me/5511988711403?text=Olá,%20tenho%20interesse%20no%20produto%20%20e%20gostaria%20de%20um%20orçamento." class="btn-outline" target="_blank">Solicitar Orçamento</a>
-                    </div>
-                </div>
-
-                <div class="produto-card">
-                    <div class="produto-img">
-                        <img src="img/OIP.jpg" alt="Cameras">
-                    </div>
-
-                    <div class="produto-info">
-                        <h3>Cameras</h3>
-                        <p>Descrição breve do produto.</p>
-                        <a href="https://wa.me/5511988711403?text=Olá,%20tenho%20interesse%20no%20produto%20%20e%20gostaria%20de%20um%20orçamento." class="btn-outline" target="_blank">Solicitar Orçamento</a>
-                    </div>
-                </div>
+                <a href="carregadores.html" target="_blank" rel="noopener noreferrer" class="produto-card">
+                    <img src="img/carregador_fonte_apple_.webp" alt="Carregadores">
+                    <h3>Carregadores</h3>
+                    <p>Confira todos os modelos disponíveis</p>
+                </a>
 
             </div>
     </section>
@@ -202,6 +185,20 @@
         function enviarWhats() {
             window.open("https://wa.me/5511988711403?text=Olá.%20sou%20lojista%20e%20gostaria%20de%20fazer%20um%20pedido.")
         }
+    </script>
+
+    <script>
+        const elements = document.querySelectorAll(".fade-up");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                }
+            });
+        }, { threshold: 0.2 });
+
+        elements.forEach(el => observer.observe(el));
     </script>
 
     <a href="https://wa.me/5511988711403?text=Olá,%20acabei%20de%20acessar%20o%20site%20da%20Santos%20Distribuidora%20e%20gostaria%20de%20solicitar%20um%20orçamento."

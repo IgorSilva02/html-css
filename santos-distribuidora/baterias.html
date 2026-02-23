@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baterias | Santos Distribuidora</title>
+    <link rel="stylesheet" href="baterias/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+
+            <a href="index.html" class="logo">
+                <img src="img/logo.png.png" alt="Santos Distribuidora">
+                <span class="logo-texto"></span>
+            </a>
+
+            <h1 class="nome-empresa">SANTOS DISTRIBUIDORA</h1>
+
+            <link rel="stylesheet"
+                    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+
+            <div class="hamburguer" id="hamburguer">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+
+            <div class="humburguer" id="hamburguer"></div>
+            <nav class="mobile-nav" id="mobileNav"></nav>
+            <div class="overlay" id="overlay"></div>
+
+            <nav  class="mobile-nav" id="mobileNav">
+                <ul class="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#catalogo">Catálogo</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <section class="hero-interno">
+        <div class="container">
+            <span class="subtitulo">CATÁLOGO</span>
+            <h1>Baterias</h1>
+            <p>Distribuição para lojistas e assistências técnicas</p>
+        </div>
+    </section>
+
+    <section class="catalogo-lista">
+        <div class="container">
+
+            <div class="lista-produtos">
+
+                <div class="item">
+                    <h3>Bateria iPhone 11</h3>
+                    <p>Alta qualidade - pronta entrega</p>
+                    <a href="https://wa.me/5511988711403?text=Olá,%20Bom dia,%20quero%20orçamento%20Bateria%20iPhone$2011"
+                        class="btn" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a>
+                </div>
+
+                <div class="item">
+                    <h3>Bateria iPhone XR</h3>
+                    <p>Produto Premium</p>
+                    <a href="https://wa.me/5511988711403?text=Olá,%20Bom dia,%20quero%20orçamento%20Bateria%20iPhone%20XR"
+                        class="btn" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a>
+                </div>
+
+                <div class="item">
+                    <h3>Bateria iPhone 12</h3>
+                    <p>Alta durabilidade</p>
+                    <a href="https://wa.me/5511988711403?text=Olá,%20Bom dia,%20quero%20orçamento%20Bateria%20iPhone%2012"
+                        class="btn" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+    const mobileNav = document.getElementById("mobileNav");
+    const overlay = document.getElementById("overlay");
+
+    if (hamburger && mobileNav && overlay) {
+
+        hamburger.addEventListener("click", () => {
+            mobileNav.classList.toggle("active");
+            overlay.classList.toggle("active");
+        });
+
+        overlay.addEventListener("click", () => {
+            mobileNav.classList.remove("active");
+            overlay.classList.remove("active");
+        });
+
+    }
+    </script>
+
+</body>
+
+</html>

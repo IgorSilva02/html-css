@@ -7,15 +7,31 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: #20304b;
+    color: white;
+}
+
 body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
     color: #222;
 }
 
 .container {
     width: 90%;
-    max-width: 1100px;
-    margin: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 120px 0;
 }
 
 header {
@@ -50,6 +66,10 @@ header {
     letter-spacing: 3px;
     margin-bottom: 8px;
     
+}
+
+h2 {
+    letter-spacing: -1px;
 }
 
 nav {
@@ -128,6 +148,17 @@ nav a:hover::after {
     overflow: hidden;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
     transition: .4s ease;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade-up.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .produto-card:hover {
